@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef Samnang | Professional Profile</title>
+    <title>Samnang Loy | Professional Culinary Portfolio & CV</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -21,6 +21,9 @@
             justify-content: space-between;
             align-items: center;
             background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .site-logo {
@@ -58,7 +61,7 @@
         h1.main-title {
             font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             letter-spacing: -0.5px;
         }
 
@@ -72,7 +75,7 @@
 
         /* Section Styling */
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         h2 {
@@ -81,7 +84,7 @@
             color: #111827;
             border-bottom: 1px solid #e5e7eb;
             padding-bottom: 8px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         p {
@@ -94,43 +97,102 @@
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .job-title {
             font-weight: 700;
             color: #111827;
+            font-size: 1.1rem;
         }
 
-        /* Related People / Profile Card Section */
-        .person-card {
+        .job-company {
+            color: #4b5563;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .job-block {
+            margin-bottom: 25px;
+        }
+
+        /* Profile Section with Image */
+        .profile-card {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             align-items: flex-start;
-            margin-top: 20px;
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 30px;
         }
 
-        .person-image {
-            width: 120px;
-            height: 150px;
+        .profile-image {
+            width: 140px;
+            height: 175px;
             object-fit: cover;
             border: 1px solid #d1d5db;
             border-radius: 4px;
+            flex-shrink: 0;
         }
 
-        .person-details h4 {
-            margin: 0 0 5px 0;
-            font-size: 1.2rem;
-            font-weight: 700;
+        .profile-details h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.4rem;
+            font-weight: 800;
         }
 
-        .person-details p {
-            margin: 0;
+        .profile-details p {
+            margin: 0 0 10px 0;
             font-size: 0.95rem;
-            color: #4b5563;
         }
 
-        /* Research Areas Section */
+        /* Download Resume Button */
+        .btn-download {
+            display: inline-block;
+            background: #990000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .btn-download:hover {
+            background: #7a0000;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .skills-grid li {
+            list-style: none;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .skills-grid li::before {
+            content: "•";
+            color: #990000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Research / Expertise Tags */
         .research-areas {
             margin-top: 50px;
             border-top: 1px solid #e5e7eb;
@@ -198,67 +260,137 @@
 
 <!-- Top Navigation Bar -->
 <header class="site-header">
-    <div class="site-logo">Chef Samnang Portfolio</div>
+    <div class="site-logo">Samnang Loy | Portfolio</div>
     <nav class="site-nav">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#profile">Profile</a>
-        <a href="#contact">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
     </nav>
 </header>
 
 <div class="container">
     
     <!-- Main Header Title -->
-    <h1 class="main-title">Chef Samnang</h1>
-    <div class="subtitle">Professional Chef | Fine Dining & Luxury Cruise Experience</div>
+    <h1 class="main-title">Samnang Loy</h1>
+    <div class="subtitle">Professional Cook & Culinary Specialist</div>
 
-    <!-- About Section -->
-    <div id="about" class="section">
-        <h2>About Me</h2>
-        <p>Professional Chef with over 10 years of experience in fine dining and luxury hospitality. Skilled in high-end culinary techniques, menu development, and delivering exceptional dining experiences in San Francisco and aboard luxury cruise liners.</p>
+    <!-- Profile Overview Card with Image -->
+    <div class="profile-card" id="about">
+        <img src="IMG_1079.JPG" alt="Samnang Loy" class="profile-image">
+        <div class="profile-details">
+            <h3>Professional Summary</h3>
+            <p>Dedicated and versatile Professional Cook with extensive international experience spanning high-end luxury resorts, recognized global hotel brands, and fast-paced European cruise lines. Skilled in international cuisine, high-volume fine dining, strict food safety practices, and optimal kitchen organization.</p>
+            <p><strong>Location:</strong> San Francisco, CA 94109</p>
+            <p><strong>Email:</strong> Samnangloy01@gmail.com | <strong>Tel:</strong> +1 (415) 806-2609</p>
+            <!-- Download Button (សូមដាក់ file Resume.pdf ទុកកន្លែងជាមួយគ្នា) -->
+            <a href="Resume.pdf" target="_blank" class="btn-download">Download Full Resume (PDF)</a>
+        </div>
     </div>
 
-    <!-- Work Experience -->
+    <!-- Core Competencies / Skills -->
+    <div id="skills" class="section">
+        <h2>Core Competencies</h2>
+        <ul class="skills-grid">
+            <li>Food Safety & Sanitation (ServSafe standard)</li>
+            <li>International & Local Cuisines (Asian, European, Fusion)</li>
+            <li>High-Volume Fine Dining & Banquets</li>
+            <li>Inventory & Proper Cold Storage Control</li>
+            <li>Action Station & Front-of-House Food Preparation</li>
+            <li>Team Collaboration & Cross-Departmental Communication</li>
+        </ul>
+    </div>
+
+    <!-- Work Experience Section -->
     <div id="experience" class="section">
         <h2>Work Experience</h2>
         
-        <p><span class="job-title">Fine Dining Chef</span> — San Francisco, CA</p>
-        <ul>
-            <li>Prepared and executed fine dining dishes maintaining the highest quality standards.</li>
-            <li>Managed kitchen line operations and presented sophisticated culinary plating.</li>
-        </ul>
+        <div class="job-block">
+            <div class="job-title">Cook — European Cruise Line (Rhine River Cruise)</div>
+            <div class="job-company">Feb 2024 - Dec 2025</div>
+            <ul>
+                <li>Prepared and executed high-quality international menus for diverse global guests traveling along the historic Rhine River.</li>
+                <li>Adapted quickly to fast-paced galley operations, managing high-volume meal services while adhering to strict maritime health and safety standards.</li>
+                <li>Collaborated closely with an international culinary team to deliver consistently premium breakfast, lunch, and dinner presentations.</li>
+            </ul>
+        </div>
 
-        <p style="margin-top: 20px;"><span class="job-title">Luxury Cruise Ship Chef</span> — AmaMora Cruise Line</p>
-        <ul>
-            <li>Delivered high-volume international gourmet cuisine in a fast-paced luxury environment.</li>
-            <li>Upheld strict international food safety, sanitation, and quality guidelines.</li>
-        </ul>
+        <div class="job-block">
+            <div class="job-title">Cook — Courtyard by Marriott</div>
+            <div class="job-company">Mar 2021 - Nov 2022 | Phnom Penh, Cambodia</div>
+            <ul>
+                <li>Handled precise daily food preparation and line cooking for hotel dining services, banquets, and high-volume breakfast buffets.</li>
+                <li>Maintained Marriott's strict international standards for food safety, presentation, freshness, and kitchen cleanliness.</li>
+                <li>Ensured optimal rotation and cold storage management of premium ingredients.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-title">Chef — WILD Creative Bar and Eatery</div>
+            <div class="job-company">Oct 2018 - Aug 2020 | Siem Reap, Cambodia</div>
+            <ul>
+                <li>Managed daily kitchen operations, designed creative menus, and ensured high-quality plating and presentation.</li>
+                <li>Maintained strict food freshness standards and managed inventory efficiently.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-title">Chef — Landing Zone Boutique Hotel</div>
+            <div class="job-company">Feb 2018 - Feb 2019 | Siem Reap, Cambodia</div>
+            <ul>
+                <li>Led food preparation and execution for hotel guests, focusing on both local and international dishes.</li>
+                <li>Coordinated with front-of-house staff to ensure excellent guest satisfaction and smooth service.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-title">Demi Chef — The House Restaurant</div>
+            <div class="job-company">Sep 2017 - Dec 2017 | Luang Prabang, Laos</div>
+            <ul>
+                <li>Assisted the Head Chef in supervising station prep, maintaining high culinary standards in a fast-paced environment.</li>
+                <li>Monitored kitchen hygiene, refrigeration, and proper storage techniques.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-title">Cook — Belmond La Résidence D'Angkor</div>
+            <div class="job-company">Jun 2017 - Dec 2017 | Siem Reap, Cambodia</div>
+            <ul>
+                <li>Prepared high-end cuisine for a luxury resort environment, adhering to precise recipe specifications and premium quality control.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-title">Cook — Angkor Village Resort</div>
+            <div class="job-company">Aug 2015 - Aug 2016 | Siem Reap, Cambodia</div>
+            <ul>
+                <li>Handled high-volume food prep and execution for resort breakfast and dining services.</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Profile Section with IMG_1079.jpg -->
-    <div id="profile" class="section">
-        <h2>Profile</h2>
-        <div class="person-card">
-            <img src="IMG_1079.jpg" alt="Chef Samnang" class="person-image">
-            <div class="person-details">
-                <h4>Chef Samnang</h4>
-                <p>Professional Chef & Culinary Instructor</p>
-                <p style="margin-top: 5px; color: #6b7280; font-size: 0.85rem;">San Francisco, CA</p>
-            </div>
+    <!-- Education & Languages -->
+    <div class="section">
+        <h2>Education & Languages</h2>
+        <div class="job-block">
+            <div class="job-title">Certificate in Cooking Skills</div>
+            <div class="job-company">Sala Baï Hotel & Restaurant School (2014 - 2015) | Siem Reap, Cambodia</div>
+        </div>
+        <div class="job-block">
+            <div class="job-title">Languages</div>
+            <p><strong>Khmer:</strong> Native | <strong>English:</strong> Fluent / Professional Proficiency</p>
         </div>
     </div>
 
     <!-- Research / Expertise Categories -->
-    <div class="research-areas">
+    <div class="research-areas" id="resume">
         <h3>Culinary Specializations & Areas</h3>
         <div class="tags-list">
             <a href="#">Fine Dining</a> &bull; 
-            <a href="#">Luxury Cruise Hospitality</a> &bull; 
-            <a href="#">San Francisco Culinary Arts</a> &bull; 
-            <a href="#">Menu Development</a> &bull; 
-            <a href="#">Gourmet Plating</a> &bull; 
-            <a href="#">Kitchen Operations</a> &bull; 
+            <a href="#">Luxury Resorts</a> &bull; 
+            <a href="#">European Cruise Lines</a> &bull; 
+            <a href="#">International Cuisine</a> &bull; 
+            <a href="#">Kitchen Management</a> &bull; 
             <a href="#">Food Safety & Sanitation</a>
         </div>
     </div>
@@ -273,12 +405,12 @@
             <p>United States</p>
         </div>
         <div class="footer-col">
-            <p>Email: samnangloy01@gmail.com</p>
+            <p>Email: Samnangloy01@gmail.com</p>
             <p>Professional Culinary Portfolio</p>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2026 Chef Samnang. All rights reserved.
+        &copy; 2026 Samnang Loy. All rights reserved.
     </div>
 </footer>
 
