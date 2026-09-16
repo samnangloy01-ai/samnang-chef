@@ -5,19 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef Samnang | Culinary Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
-        header { background: #1e293b; color: #f59e0b; text-align: center; padding: 2.5rem 1rem; border-bottom: 2px solid #f59e0b; }
-        h1 { margin: 0; font-size: 2.2rem; }
-        p.subtitle { color: #94a3b8; font-size: 1.1rem; margin-top: 0.5rem; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        .card { background: #1e293b; padding: 24px; margin-bottom: 24px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
-        .video-container iframe { position: absolute; top:0; left: 0; width: 100%; height: 100%; border:0; }
-        h2 { color: #f59e0b; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; }
-        ul { padding-left: 20px; color: #cbd5e1; }
-        li { margin-bottom: 8px; }
-        .btn { display: inline-block; background: #f59e0b; color: #0f172a; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; }
-        .job-title { font-weight: bold; color: #f8fafc; }
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131d31;
+            --border-color: #1e293b;
+            --accent-color: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #131d31 0%, #0f172a 100%);
+            color: var(--accent-color);
+            text-align: center;
+            padding: 3.5rem 1rem;
+            border-bottom: 3px solid var(--accent-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-top: 0.75rem;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 32px;
+            margin-bottom: 28px;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-top: 0;
+            font-size: 1.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+            margin: 12px 0 0 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .experience-item {
+            margin-bottom: 24px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.01);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 15px;
+            border: 2px solid var(--border-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #0b0f19;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+
+        .btn:hover {
+            background: #fbbf24;
+            transform: translateY(-2px);
+        }
+
+        .center-card {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -28,6 +169,7 @@
 </header>
 
 <div class="container">
+    
     <!-- About Section -->
     <div class="card">
         <h2>About Me</h2>
@@ -38,7 +180,7 @@
     <div class="card">
         <h2>Education & Culinary Training</h2>
         <ul>
-            <li><span class="job-title">Culinary Arts Program</span> - Sala Baï Hotel & Restaurant School</li>
+            <li><span class="job-title">Culinary Arts Program</span> – Sala Baï Hotel & Restaurant School</li>
             <li><span class="job-title">Professional Culinary Certification</span></li>
             <li><span class="job-title">Food Safety & Hygiene Sanitation Certification</span></li>
         </ul>
@@ -48,21 +190,32 @@
     <div class="card">
         <h2>Work Experience</h2>
         
-        <p><span class="job-title">Fine Dining Chef</span> - San Francisco, CA</p>
-        <ul>
-            <li>Prepared and executed fine dining dishes maintaining the highest quality standards.</li>
-            <li>Managed kitchen line operations and presented sophisticated culinary plating.</li>
-        </ul>
+        <div class="experience-item">
+            <div class="experience-header"><span class="job-title">Fine Dining Chef</span> — San Francisco, CA</div>
+            <ul>
+                <li>Prepared and executed fine dining dishes maintaining the highest quality standards.</li>
+                <li>Managed kitchen line operations and presented sophisticated culinary plating.</li>
+            </ul>
+        </div>
 
-        <p><span class="job-title">Luxury Cruise Ship Chef</span> - AmaMora Cruise Line</p>
-        <ul>
-            <li>Delivered high-volume international gourmet cuisine in a fast-paced luxury environment.</li>
-            <li>Upheld strict international food safety, sanitation, and quality guidelines.</li>
-        </ul>
+        <div class="experience-item" style="margin-top: 24px;">
+            <div class="experience-header"><span class="job-title">Luxury Cruise Ship Chef</span> — AmaMora Cruise Line</div>
+            <ul>
+                <li>Delivered high-volume international gourmet cuisine in a fast-paced luxury environment.</li>
+                <li>Upheld strict international food safety, sanitation, and quality guidelines.</li>
+            </ul>
+        </div>
     </div>
-<div class="card" style="text-align: center;">
-    <h2 style="color: #f59e0b;">Signature Pepper Steak</h2>
-   <img src="IMG_7096.JPG" alt="Signature Pepper Steak" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+
+    <!-- Signature Dish Showcase -->
+    <div class="card">
+        <h2>Signature Dish</h2>
+        <p style="color: var(--text-muted); margin-top: 5px;">A meticulously plated culinary masterpiece.</p>
+        <div class="image-container">
+            <img src="IMG_7096.JPG" alt="Signature Pepper Steak">
+        </div>
+    </div>
+
     <!-- Video Showcase -->
     <div class="card">
         <h2>Featured Culinary Video</h2>
@@ -72,11 +225,12 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="card">
+    <div class="card center-card">
         <h2>Get In Touch</h2>
-        <p>For culinary inquiries or professional opportunities:</p>
+        <p style="color: var(--text-muted);">For culinary inquiries or professional opportunities:</p>
         <a href="mailto:samnangloy01@gmail.com" class="btn">Contact Me</a>
     </div>
+
 </div>
 
 </body>
