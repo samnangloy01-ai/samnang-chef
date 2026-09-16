@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef Samnang | Culinary Portfolio</title>
+    <title>Chef Samnang | Professional Profile</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -102,50 +102,35 @@
             color: #111827;
         }
 
-        /* Media Elements */
-        .image-box img {
-            width: 100%;
-            max-width: 600px;
+        /* Related People / Profile Card Section */
+        .person-card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .person-image {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border: 1px solid #d1d5db;
             border-radius: 4px;
-            border: 1px solid #e5e7eb;
-            margin-top: 10px;
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 4px;
-            border: 1px solid #e5e7eb;
-            margin-top: 10px;
+        .person-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+        .person-details p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #4b5563;
         }
 
-        .btn {
-            display: inline-block;
-            background: #111827;
-            color: #ffffff;
-            padding: 10px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .btn:hover {
-            background: #990000;
-        }
-
-        /* Research Areas Section (ដូចក្នុងរូបភាពខាងក្រោម) */
+        /* Research Areas Section */
         .research-areas {
             margin-top: 50px;
             border-top: 1px solid #e5e7eb;
@@ -174,7 +159,7 @@
             text-decoration: underline;
         }
 
-        /* Footer (ដូចក្នុងរូបភាពពណ៌ខៀវទឹកសមុទ្រដិត) */
+        /* Footer */
         footer {
             background-color: #0b1f30;
             color: #ffffff;
@@ -201,11 +186,6 @@
             margin-bottom: 6px;
         }
 
-        .footer-col a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-
         .footer-bottom {
             max-width: 900px;
             margin: 25px auto 0 auto;
@@ -222,7 +202,7 @@
     <nav class="site-nav">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#showcase">Showcase</a>
+        <a href="#profile">Profile</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -237,16 +217,6 @@
     <div id="about" class="section">
         <h2>About Me</h2>
         <p>Professional Chef with over 10 years of experience in fine dining and luxury hospitality. Skilled in high-end culinary techniques, menu development, and delivering exceptional dining experiences in San Francisco and aboard luxury cruise liners.</p>
-    </div>
-
-    <!-- Education & Training -->
-    <div class="section">
-        <h2>Education & Culinary Training</h2>
-        <ul>
-            <li><span class="job-title">Culinary Arts Program</span> – Sala Baï Hotel & Restaurant School</li>
-            <li><span class="job-title">Professional Culinary Certification</span></li>
-            <li><span class="job-title">Food Safety & Hygiene Sanitation Certification</span></li>
-        </ul>
     </div>
 
     <!-- Work Experience -->
@@ -266,31 +236,20 @@
         </ul>
     </div>
 
-    <!-- Signature Dish Showcase -->
-    <div id="showcase" class="section">
-        <h2>Signature Dish</h2>
-        <p>Signature Pepper Steak — Meticulously prepared and plated to culinary perfection.</p>
-        <div class="image-box">
-            <img src="IMG_7096.JPG" alt="Signature Pepper Steak">
+    <!-- Profile Section with IMG_1079.jpg -->
+    <div id="profile" class="section">
+        <h2>Profile</h2>
+        <div class="person-card">
+            <img src="IMG_1079.jpg" alt="Chef Samnang" class="person-image">
+            <div class="person-details">
+                <h4>Chef Samnang</h4>
+                <p>Professional Chef & Culinary Instructor</p>
+                <p style="margin-top: 5px; color: #6b7280; font-size: 0.85rem;">San Francisco, CA</p>
+            </div>
         </div>
     </div>
 
-    <!-- Video Showcase -->
-    <div class="section">
-        <h2>Featured Culinary Video</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact" class="section">
-        <h2>Get In Touch</h2>
-        <p>For culinary inquiries or professional opportunities:</p>
-        <a href="mailto:samnangloy01@gmail.com" class="btn">Contact Me</a>
-    </div>
-
-    <!-- Research / Expertise Categories (រចនាប័ទ្មដូចក្នុងរូបភាព) -->
+    <!-- Research / Expertise Categories -->
     <div class="research-areas">
         <h3>Culinary Specializations & Areas</h3>
         <div class="tags-list">
