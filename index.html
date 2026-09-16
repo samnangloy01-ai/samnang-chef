@@ -5,104 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef Samnang | Culinary Portfolio</title>
     <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-main: #111827;
-            --text-muted: #4b5563;
-            --accent-red: #990000;
-            --border-color: #e5e7eb;
-            --footer-bg: #0b1f30;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: #ffffff;
+            color: #111827;
             line-height: 1.6;
         }
 
-        /* Top Institutional Bar (ដូចក្នុងរូបភាព) */
-        .top-nav {
-            border-bottom: 1px solid var(--border-color);
-            padding: 14px 5%;
+        /* Top Institutional Header Bar */
+        .site-header {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.95rem;
-            background: #fff;
+            background: #ffffff;
         }
 
-        .top-nav .brand {
-            font-weight: 800;
-            letter-spacing: 0.5px;
+        .site-logo {
+            font-weight: 900;
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+            color: #000;
             text-transform: uppercase;
         }
 
-        .nav-links {
+        .site-nav {
             display: flex;
-            gap: 24px;
+            gap: 25px;
+            font-size: 0.95rem;
         }
 
-        .nav-links a {
-            color: var(--text-main);
+        .site-nav a {
+            color: #111827;
             text-decoration: none;
             font-weight: 600;
         }
 
-        .nav-links a:hover {
-            color: var(--accent-red);
+        .site-nav a:hover {
+            color: #990000;
             text-decoration: underline;
         }
 
-        /* Main Header Section */
-        header {
+        /* Main Content Container */
+        .container {
             max-width: 900px;
-            margin: 40px auto 20px auto;
+            margin: 40px auto;
             padding: 0 20px;
-            border-bottom: 2px solid var(--text-main);
-            padding-bottom: 20px;
         }
 
-        h1 {
-            margin: 0;
+        h1.main-title {
             font-size: 2.8rem;
             font-weight: 800;
+            margin-bottom: 10px;
             letter-spacing: -0.5px;
         }
 
-        p.subtitle {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            margin-top: 8px;
+        .subtitle {
+            font-size: 1.15rem;
+            color: #4b5563;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #111827;
+            padding-bottom: 20px;
         }
 
-        /* Main Content Layout */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .section-block {
+        /* Section Styling */
+        .section {
             margin-bottom: 40px;
         }
 
         h2 {
             font-size: 1.6rem;
-            border-bottom: 1px solid var(--border-color);
+            font-weight: 800;
+            color: #111827;
+            border-bottom: 1px solid #e5e7eb;
             padding-bottom: 8px;
             margin-bottom: 16px;
-            color: var(--text-main);
         }
 
         p {
-            color: var(--text-muted);
+            color: #374151;
         }
 
         ul {
             padding-left: 20px;
-            color: var(--text-muted);
+            color: #374151;
         }
 
         li {
@@ -111,19 +99,16 @@
 
         .job-title {
             font-weight: 700;
-            color: var(--text-main);
+            color: #111827;
         }
 
         /* Media Elements */
-        .media-container {
-            margin-top: 15px;
-        }
-
-        .media-container img {
+        .image-box img {
             width: 100%;
             max-width: 600px;
             border-radius: 4px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #e5e7eb;
+            margin-top: 10px;
         }
 
         .video-container {
@@ -132,7 +117,8 @@
             height: 0;
             overflow: hidden;
             border-radius: 4px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #e5e7eb;
+            margin-top: 10px;
         }
 
         .video-container iframe {
@@ -146,8 +132,8 @@
 
         .btn {
             display: inline-block;
-            background: var(--text-main);
-            color: #fff;
+            background: #111827;
+            color: #ffffff;
             padding: 10px 24px;
             border-radius: 4px;
             text-decoration: none;
@@ -156,50 +142,72 @@
         }
 
         .btn:hover {
-            background: var(--accent-red);
+            background: #990000;
         }
 
-        /* Institutional Footer (ដូចក្នុងរូបភាពផ្នែកខាងក្រោម) */
+        /* Research Areas Section (ដូចក្នុងរូបភាពខាងក្រោម) */
+        .research-areas {
+            margin-top: 50px;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 30px;
+        }
+
+        .research-areas h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .tags-list a {
+            color: #990000;
+            text-decoration: none;
+        }
+
+        .tags-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer (ដូចក្នុងរូបភាពពណ៌ខៀវទឹកសមុទ្រដិត) */
         footer {
-            background-color: var(--footer-bg);
-            color: #fff;
-            padding: 50px 5%;
+            background-color: #0b1f30;
+            color: #ffffff;
+            padding: 50px 40px;
             margin-top: 60px;
             font-size: 0.9rem;
         }
 
-        .footer-content {
-            max-width: 1000px;
+        .footer-grid {
+            max-width: 900px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 30px;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             padding-bottom: 30px;
-        }
-
-        .footer-col h4 {
-            color: #f3f4f6;
-            margin-top: 0;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
         }
 
         .footer-col p, .footer-col a {
             color: #9ca3af;
             text-decoration: none;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .footer-col a:hover {
-            color: #fff;
+            color: #ffffff;
             text-decoration: underline;
         }
 
         .footer-bottom {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 25px auto 0 auto;
             color: #6b7280;
             font-size: 0.85rem;
@@ -209,32 +217,30 @@
 <body>
 
 <!-- Top Navigation Bar -->
-<div class="top-nav">
-    <div class="brand">Chef Samnang Portfolio</div>
-    <div class="nav-links">
+<header class="site-header">
+    <div class="site-logo">Chef Samnang Portfolio</div>
+    <nav class="site-nav">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#showcase">Showcase</a>
         <a href="#contact">Contact</a>
-    </div>
-</div>
-
-<!-- Header Section -->
-<header>
-    <h1>Chef Samnang</h1>
-    <p class="subtitle">Professional Chef Specializing in Fine Dining & Luxury Hospitality</p>
+    </nav>
 </header>
 
 <div class="container">
     
+    <!-- Main Header Title -->
+    <h1 class="main-title">Chef Samnang</h1>
+    <div class="subtitle">Professional Chef | Fine Dining & Luxury Cruise Experience</div>
+
     <!-- About Section -->
-    <div id="about" class="section-block">
+    <div id="about" class="section">
         <h2>About Me</h2>
         <p>Professional Chef with over 10 years of experience in fine dining and luxury hospitality. Skilled in high-end culinary techniques, menu development, and delivering exceptional dining experiences in San Francisco and aboard luxury cruise liners.</p>
     </div>
 
     <!-- Education & Training -->
-    <div class="section-block">
+    <div class="section">
         <h2>Education & Culinary Training</h2>
         <ul>
             <li><span class="job-title">Culinary Arts Program</span> – Sala Baï Hotel & Restaurant School</li>
@@ -244,7 +250,7 @@
     </div>
 
     <!-- Work Experience -->
-    <div id="experience" class="section-block">
+    <div id="experience" class="section">
         <h2>Work Experience</h2>
         
         <p><span class="job-title">Fine Dining Chef</span> — San Francisco, CA</p>
@@ -261,16 +267,16 @@
     </div>
 
     <!-- Signature Dish Showcase -->
-    <div id="showcase" class="section-block">
+    <div id="showcase" class="section">
         <h2>Signature Dish</h2>
         <p>Signature Pepper Steak — Meticulously prepared and plated to culinary perfection.</p>
-        <div class="media-container">
+        <div class="image-box">
             <img src="IMG_7096.JPG" alt="Signature Pepper Steak">
         </div>
     </div>
 
     <!-- Video Showcase -->
-    <div class="section-block">
+    <div class="section">
         <h2>Featured Culinary Video</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
@@ -278,31 +284,42 @@
     </div>
 
     <!-- Contact Section -->
-    <div id="contact" class="section-block">
+    <div id="contact" class="section">
         <h2>Get In Touch</h2>
-        <p>For culinary inquiries, collaborations, or professional opportunities, reach out directly:</p>
+        <p>For culinary inquiries or professional opportunities:</p>
         <a href="mailto:samnangloy01@gmail.com" class="btn">Contact Me</a>
+    </div>
+
+    <!-- Research / Expertise Categories (រចនាប័ទ្មដូចក្នុងរូបភាព) -->
+    <div class="research-areas">
+        <h3>Culinary Specializations & Areas</h3>
+        <div class="tags-list">
+            <a href="#">Fine Dining</a> &bull; 
+            <a href="#">Luxury Cruise Hospitality</a> &bull; 
+            <a href="#">San Francisco Culinary Arts</a> &bull; 
+            <a href="#">Menu Development</a> &bull; 
+            <a href="#">Gourmet Plating</a> &bull; 
+            <a href="#">Kitchen Operations</a> &bull; 
+            <a href="#">Food Safety & Sanitation</a>
+        </div>
     </div>
 
 </div>
 
 <!-- Institutional Footer -->
 <footer>
-    <div class="footer-content">
+    <div class="footer-grid">
         <div class="footer-col">
-            <h4>Chef Samnang Portfolio</h4>
-            <p>San Francisco, CA & Global Waters</p>
-            <p>Direct: samnangloy01@gmail.com</p>
+            <p><strong>San Francisco, CA</strong></p>
+            <p>United States</p>
         </div>
         <div class="footer-col">
-            <h4>Quick Links</h4>
-            <a href="#about">About Me</a>
-            <a href="#experience">Work Experience</a>
-            <a href="#showcase">Culinary Showcase</a>
+            <p>Email: samnangloy01@gmail.com</p>
+            <p>Professional Culinary Portfolio</p>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2026 Chef Samnang. All rights reserved. Professional Culinary Portfolio.
+        &copy; 2026 Chef Samnang. All rights reserved.
     </div>
 </footer>
 
