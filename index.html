@@ -6,81 +6,107 @@
     <title>Chef Samnang | Culinary Portfolio</title>
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: #131d31;
-            --border-color: #1e293b;
-            --accent-color: #f59e0b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --accent-red: #990000;
+            --border-color: #e5e7eb;
+            --footer-bg: #0b1f30;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
+        /* Top Institutional Bar */
+        .top-nav {
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            background: #fff;
+        }
+
+        .top-nav .brand {
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-red);
+            text-decoration: underline;
+        }
+
+        /* Main Header Section */
         header {
-            background: linear-gradient(135deg, #131d31 0%, #0f172a 100%);
-            color: var(--accent-color);
-            text-align: center;
-            padding: 3.5rem 1rem;
-            border-bottom: 3px solid var(--accent-color);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            max-width: 1000px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 20px;
         }
 
         h1 {
             margin: 0;
-            font-size: 2.8rem;
-            letter-spacing: 0.5px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         p.subtitle {
             color: var(--text-muted);
-            font-size: 1.2rem;
-            margin-top: 0.75rem;
-            font-weight: 300;
+            font-size: 1.15rem;
+            margin-top: 8px;
         }
 
+        /* Main Content Layout */
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .card {
-            background: var(--card-bg);
-            padding: 32px;
-            margin-bottom: 28px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: rgba(245, 158, 11, 0.3);
+        .section-block {
+            margin-bottom: 40px;
         }
 
         h2 {
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 12px;
-            margin-top: 0;
-            font-size: 1.5rem;
-            letter-spacing: 0.3px;
+            font-size: 1.6rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        p {
+            color: var(--text-muted);
         }
 
         ul {
             padding-left: 20px;
-            color: #cbd5e1;
-            margin: 12px 0 0 0;
+            color: var(--text-muted);
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .job-title {
@@ -88,35 +114,16 @@
             color: var(--text-main);
         }
 
-        .experience-item {
-            margin-bottom: 24px;
-        }
-
-        .experience-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .experience-header {
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-        }
-
-        .image-container {
-            text-align: center;
+        /* Media Elements */
+        .media-container {
             margin-top: 15px;
         }
 
-        .image-container img {
+        .media-container img {
             width: 100%;
-            max-width: 650px;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .image-container img:hover {
-            transform: scale(1.01);
+            max-width: 600px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
 
         .video-container {
@@ -124,9 +131,8 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 10px;
-            margin-top: 15px;
-            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
 
         .video-container iframe {
@@ -140,44 +146,95 @@
 
         .btn {
             display: inline-block;
-            background: var(--accent-color);
-            color: #0b0f19;
-            padding: 12px 28px;
-            border-radius: 8px;
+            background: var(--text-main);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 15px;
-            transition: background 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+            margin-top: 10px;
         }
 
         .btn:hover {
-            background: #fbbf24;
-            transform: translateY(-2px);
+            background: var(--accent-red);
         }
 
-        .center-card {
-            text-align: center;
+        /* Institutional Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: #fff;
+            padding: 40px 5%;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: #f3f4f6;
+            margin-top: 0;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #9ca3af;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 20px auto 0 auto;
+            color: #6b7280;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
+<!-- Top Navigation Bar -->
+<div class="top-nav">
+    <div class="brand">Chef Samnang Portfolio</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<!-- Header Section -->
 <header>
     <h1>Chef Samnang</h1>
-    <p class="subtitle">Professional Chef | Fine Dining & Luxury Cruise Experience</p>
+    <p class="subtitle">Professional Chef Specializing in Fine Dining & Luxury Hospitality</p>
 </header>
 
 <div class="container">
     
     <!-- About Section -->
-    <div class="card">
+    <div id="about" class="section-block">
         <h2>About Me</h2>
         <p>Professional Chef with over 10 years of experience in fine dining and luxury hospitality. Skilled in high-end culinary techniques, menu development, and delivering exceptional dining experiences in San Francisco and aboard luxury cruise liners.</p>
     </div>
 
     <!-- Education & Training -->
-    <div class="card">
+    <div class="section-block">
         <h2>Education & Culinary Training</h2>
         <ul>
             <li><span class="job-title">Culinary Arts Program</span> – Sala Baï Hotel & Restaurant School</li>
@@ -187,37 +244,33 @@
     </div>
 
     <!-- Work Experience -->
-    <div class="card">
+    <div id="experience" class="section-block">
         <h2>Work Experience</h2>
         
-        <div class="experience-item">
-            <div class="experience-header"><span class="job-title">Fine Dining Chef</span> — San Francisco, CA</div>
-            <ul>
-                <li>Prepared and executed fine dining dishes maintaining the highest quality standards.</li>
-                <li>Managed kitchen line operations and presented sophisticated culinary plating.</li>
-            </ul>
-        </div>
+        <p><span class="job-title">Fine Dining Chef</span> — San Francisco, CA</p>
+        <ul>
+            <li>Prepared and executed fine dining dishes maintaining the highest quality standards.</li>
+            <li>Managed kitchen line operations and presented sophisticated culinary plating.</li>
+        </ul>
 
-        <div class="experience-item" style="margin-top: 24px;">
-            <div class="experience-header"><span class="job-title">Luxury Cruise Ship Chef</span> — AmaMora Cruise Line</div>
-            <ul>
-                <li>Delivered high-volume international gourmet cuisine in a fast-paced luxury environment.</li>
-                <li>Upheld strict international food safety, sanitation, and quality guidelines.</li>
-            </ul>
-        </div>
+        <p style="margin-top: 20px;"><span class="job-title">Luxury Cruise Ship Chef</span> — AmaMora Cruise Line</p>
+        <ul>
+            <li>Delivered high-volume international gourmet cuisine in a fast-paced luxury environment.</li>
+            <li>Upheld strict international food safety, sanitation, and quality guidelines.</li>
+        </ul>
     </div>
 
     <!-- Signature Dish Showcase -->
-    <div class="card">
+    <div id="showcase" class="section-block">
         <h2>Signature Dish</h2>
-        <p style="color: var(--text-muted); margin-top: 5px;">A meticulously plated culinary masterpiece.</p>
-        <div class="image-container">
+        <p>Signature Pepper Steak — Meticulously prepared and plated to culinary perfection.</p>
+        <div class="media-container">
             <img src="IMG_7096.JPG" alt="Signature Pepper Steak">
         </div>
     </div>
 
     <!-- Video Showcase -->
-    <div class="card">
+    <div class="section-block">
         <h2>Featured Culinary Video</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
@@ -225,13 +278,33 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="card center-card">
+    <div id="contact" class="section-block">
         <h2>Get In Touch</h2>
-        <p style="color: var(--text-muted);">For culinary inquiries or professional opportunities:</p>
+        <p>For culinary inquiries, collaborations, or professional opportunities, reach out directly:</p>
         <a href="mailto:samnangloy01@gmail.com" class="btn">Contact Me</a>
     </div>
 
 </div>
+
+<!-- Institutional Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>Chef Samnang Portfolio</h4>
+            <p>San Francisco, CA & Global Waters</p>
+            <p>Direct: samnangloy01@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#about">About Me</a>
+            <a href="#experience">Work Experience</a>
+            <a href="#showcase">Culinary Showcase</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Chef Samnang. All rights reserved. Professional Culinary Portfolio.
+    </div>
+</footer>
 
 </body>
 </html>
